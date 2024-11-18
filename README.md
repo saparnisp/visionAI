@@ -14,10 +14,6 @@ This project uses Vision AI to automatically extract structured data from PDF in
 
 - Python 3.x
 - Ollama with llama3.2-vision model running locally
-- Required Python packages:
-  - PyMuPDF (fitz)
-  - Pillow
-  - requests
 
 ## Installation
 
@@ -27,9 +23,9 @@ git clone https://github.com/saparnisp/visionAI.git
 cd visionAI
 ```
 
-2. Install required packages:
+2. Install required packages using pip:
 ```bash
-pip install PyMuPDF Pillow requests
+pip install -r requirements.txt
 ```
 
 3. Ensure Ollama is running with llama3.2-vision model on localhost:11434
@@ -97,6 +93,14 @@ The extracted data is saved in JSON format with the following structure:
 - `test_single_invoice.py`: Script for testing single invoice processing
 - `invoices/`: Directory containing PDF invoices to process
 - `extracted_invoices.json`: Output file containing extracted data
+- `requirements.txt`: Python package dependencies
+
+## Dependencies
+
+The project requires the following Python packages (specified in requirements.txt):
+- PyMuPDF (v1.23.8) - PDF processing
+- Pillow (v10.2.0) - Image processing
+- requests (v2.31.0) - HTTP requests for API communication
 
 ## Error Handling
 
